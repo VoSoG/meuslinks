@@ -1,0 +1,163 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+body {
+  background-color: black;
+  background-image: url('https://wallpaperaccess.com/full/2641054.gif');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+h4 {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  padding-top: 25px;
+  margin-bottom: 10px;
+}
+
+.links li a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.links li .instagram:hover {
+  background: linear-gradient(blue, #d90166, red, orange, yellow);
+  color: white;
+  border-radius: 15px;
+}
+
+.links li .twitter:hover {
+  background: linear-gradient(blue, black, blue);
+  color: white;
+  border-radius: 15px;
+}
+
+.links li .youtube:hover {
+  background: linear-gradient(red, black, red);
+  color: white;
+  border-radius: 15px;
+}
+
+.links li .tiktok:hover {
+  background: linear-gradient(black, white, black);
+  color: black;
+  border-radius: 15px;
+}
+
+.links li .spotfy:hover {
+  background: linear-gradient(green, black, green);
+  color: white;
+  border-radius: 15px;
+}
+
+.links li .github:hover {
+  background: linear-gradient(white, black);
+  color: white;
+  border-radius: 15px;
+}
+
+.links li .telegram:hover {
+  background: linear-gradient(blue, black, blue);
+  color: white;
+  border-radius: 15px;
+}
+
+.links li .discord:hover {
+  background: linear-gradient(blue, black, blue);
+  color: white;
+  border-radius: 15px;
+}
+
+.image-container {
+  margin: 25px;
+  width: 200px;
+  height: 200px;
+  background-image: url('https://i.ibb.co/nCJjv44/IMG-20230704-213413-662.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  height: 20px;
+  width: 15;
+}
+.footer .copy-symbol {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+
+.VSG {
+  color: #fff;
+}
+
+.criador {
+  display: flex;
+  justify-content: space-between;
+}
+
+.origem {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+  .criador {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
