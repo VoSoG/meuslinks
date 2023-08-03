@@ -1,80 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Links</title>
 
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  
-    <div class="menu">
-      <h4>Luis H</h4>
-      <div class="image-container"></div>
+
+    
+  <script>
+    // Função para alternar entre os fundos claros e escuros
+    function toggleDarkMode() {
+      var body = document.body;
+      var button = document.querySelector('.toggle-button');
+      body.classList.toggle('dark-mode');
+      button.classList.toggle('active');
+      
+      if (button.classList.contains('active')) {
+        body.style.backgroundImage = "url('https://wallpaperaccess.com/full/5927911.gif')";
+        button.textContent = 'MUDAR FUNDO';
+      } else {
+        body.style.backgroundImage = "url('https://wallpaperaccess.com/full/2641054.gif')";
+        button.textContent = 'MUDAR FUNDO';
+      }
+    }
+    // ...
+
+
+
+    // Função para atualizar o relógio
+    function updateClock() {
+      const now = new Date();
+
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const year = now.getFullYear();
+
+      const clockText = `${hours}:${minutes}:${seconds}`;
+      const dateText = `${day}/${month}/${year}`;
+
+      document.getElementById('clock').innerHTML = clockText;
+      document.getElementById('date').innerHTML = dateText;
+    }
+
+    // Atualiza o relógio a cada segundo
+    setInterval(updateClock, 1000);
+
+    // Atualização inicial do relógio
+    updateClock();
+    // ...
+  </script>
+</head>
+<body>
+  <!-- Cabeçalho do menu -->
+  <div class="menu">
+    <div class="listra">
+
+      <!-- Botão de mudar o fundo -->
+        <button class="toggle-button" onclick="toggleDarkMode()">MUDAR FUNDO</button>
+
+        <!-- Nome -->
+        <h4>Luis H</h4>
+
+        <!-- Relógio e data -->
+        <div class="data-hora">
+          <div id="clock"></div>
+          <div class="date" id="date"></div>
+        </div>
     </div>
+
+    <!-- Imagem do perfil -->
+    <div class="image-container"></div>
+    
+    <!-- Título da seção de links -->
     <div class="container">
       <h1>Meus Links</h1>
-      <div class="links">
-        <li>
-          <a class="instagram" href="https://www.instagram.com/luisin004/">
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""> 
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a class="twitter" href="https://www.twitter.com/Le_Vesgote">
-            <img class="logo" src="https://static.vecteezy.com/system/resources/previews/018/930/745/original/twitter-logo-twitter-icon-transparent-free-free-png.png" alt="" width="20"> 
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a class="youtube" href="https://www.youtube.com/@VesguinhodoR6/featured">
-            <img class="logo" src="https://static.vecteezy.com/system/resources/previews/018/930/572/original/youtube-logo-youtube-icon-transparent-free-png.png" alt=""> 
-            Youtube
-          </a>
-        </li>
-        <li>
-          <a class="tiktok" href="https://www.tiktok.com/@luisinmmiv">
-            <img class="logo" src="https://assets.stickpng.com/images/5cb78678a7c7755bf004c14c.png" alt="" width="20"> 
-            Tik Tok
-          </a>
-        </li>
-        <li>
-          <a class="spotfy" href="">
-            <img class="logo" src="https://static.vecteezy.com/system/resources/previews/018/930/750/non_2x/spotify-app-logo-spotify-icon-transparent-free-png.png" alt="" width="20"> 
-            Spotfy
-          </a>
-        </li>
-        <li>
-          <a class="github" href="https://github.com/VoSoG">
-            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" alt=""> 
-            Git Hub
-          </a>
-        </li>
-        <li>
-          <a class="telegram" href="https://www.t.me/V0s0G">
-            <img class="logo" src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo-1-1.png" alt=""> 
-            Telegram
-          </a>
-        </li>
-        <li>
-          <a class="discord" href="https://www.discord.com/@usuario_inexistente">
-            <img class="logo" src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-0.png" alt=""> 
-            Discord
-          </a>
-        </li>
-      </div>
     </div>
-  </body>
+  </div>
+
+
+  <!-- Lista de links -->
+  <div class="links">
+
+    <!-- Links individuais -->
+    <li>
+      <a class="instagram" href="https://www.instagram.com/luisin004/">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""> 
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a class="twitter" href="https://www.twitter.com/Le_Vesgote">
+        <img class="logo" src="https://static.vecteezy.com/system/resources/previews/018/930/745/original/twitter-logo-twitter-icon-transparent-free-free-png.png" alt="" width="20"> 
+        Twitter
+      </a>
+    </li>
+    <li>
+      <a class="youtube" href="https://www.youtube.com/@VesguinhodoR6/featured">
+        <img class="logo" src="https://static.vecteezy.com/system/resources/previews/018/930/572/original/youtube-logo-youtube-icon-transparent-free-png.png" alt=""> 
+        Youtube
+      </a>
+    </li>
+    <li>
+      <a class="tiktok" href="https://www.tiktok.com/@luisinmmiv">
+        <img class="logo" src="https://static.vecteezy.com/system/resources/previews/016/716/450/original/tiktok-icon-free-png.png" alt="" width="20"> 
+        Tik Tok
+      </a>
+    </li>
+    <li>
+      <a class="spotfy" href="">
+        <img class="logo" src="https://static.vecteezy.com/system/resources/previews/018/930/750/non_2x/spotify-app-logo-spotify-icon-transparent-free-png.png" alt="" width="20"> 
+        Spotfy / OFF
+      </a>
+    </li>
+    <li>
+      <a class="github" href="https://github.com/VoSoG">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" alt=""> 
+        Git Hub
+      </a>
+    </li>
+    <li>
+      <a class="telegram" href="https://www.t.me/V0s0G">
+        <img class="logo" src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo-1-1.png" alt=""> 
+        Telegram
+      </a>
+    </li>
+  </div>
+
+  <!-- Rodapé da página -->
   <footer>
-    <div class="criador">
-    <p>Site totalmente autoral</p>
-    <p>By: Luis Henrique</p>
-    </div>
-    <div class="origem">
-      <h5>V1.0 </h5>
-      <span class="copy-symbol"> | &copy;</span> 2023
-    </div>
+
+    <!-- Informações do criador -->
+      <div class="criador">
+      <p>Site totalmente autoral</p>
+      <p>By: Luis Henrique</p>
+      </div>
+
+      <!-- Informações da versão e ano -->
+      <div class="origem">
+        <h5>V1.5 </h5>
+        <span class="copy-symbol"> | &copy;</span> 2023
+      </div>
   </footer>
+</body>
 </html>
